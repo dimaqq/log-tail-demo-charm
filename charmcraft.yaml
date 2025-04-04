@@ -1,0 +1,41 @@
+---
+name: log-tail-demo
+type: charm
+title: Log tail demo
+summary: Showcase how to tail workload logs
+description: Showcase how to tail workload logs
+
+base: ubuntu@24.04
+build-base: ubuntu@24.04
+platforms:
+    amd64:
+    arm64:
+
+parts:
+    hexanator:
+        plugin: uv
+        source: .
+        build-snaps:
+            - astral-uv
+        build-packages:
+            - cargo
+
+containers:
+    workload:
+        resource: ubuntu
+
+resources:
+    ubuntu:
+        type: oci-image
+        description: Ubuntu 24.04
+        upstream-source: docker.io/_/ubuntu:24.04
+
+requires:
+    charm-tracing:
+        interface: tracing
+        limit: 1
+        optional: true
+    send-ca-cert:
+        interface: certificate_transfer
+        limit: 1
+        optional: true
