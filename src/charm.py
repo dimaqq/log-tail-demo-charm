@@ -44,7 +44,7 @@ class MyCharm(ops.CharmBase):
                     "summary": "A workload",
                     "command": "/tmp/workload.py",
                     "startup": "enabled",
-                    "after": ["workload-access-log", "workload-error-log", "workload-audit-log"],
+                    "requires": ["workload-access-log", "workload-error-log", "workload-audit-log"],
                 },
                 "workload-access-log": {
                     "override": "replace",
