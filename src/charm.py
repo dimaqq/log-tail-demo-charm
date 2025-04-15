@@ -14,7 +14,6 @@
 # limitations under the License.
 from __future__ import annotations
 
-import os
 import pathlib
 import ops
 
@@ -22,12 +21,12 @@ import workload
 
 
 class MyCharm(ops.CharmBase):
-    def __init__(self, *args):
-        super().__init__(*args)
-        self.tracing = ops.tracing.Tracing(self, "charm-tracing")
+    def __init__(self, framework: ops.Framework):
+        super().__init__(framework)
+        self.tracing = ops.tracing.Tracing(self, "charm-tracing", ca_relation_name="send-ca-cert")
         self.framework.observe(self.on.workload_pebble_ready, self._on_pebble_ready)
 
-    def _on_pebble_ready(self, event):
+    def _on_pebble_ready(self, event: ops.PebbleReadyEvent) -> None:
         container = self.unit.get_container("workload")
 
         container.exec(["apt-get", "update"], environment={"DEBIAN_FRONTEND": "noninteractive"}).wait()

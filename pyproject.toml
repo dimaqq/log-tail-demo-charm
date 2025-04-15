@@ -20,9 +20,9 @@ dev = [
 ]
 
 [tool.uv.sources]
-ops-scenario = { url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip", subdirectory = "testing" }
-ops-tracing = { url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip", subdirectory = "tracing" }
-ops = { url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip" }
+ops-scenario = { url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip", subdirectory = "testing" }
+ops-tracing = { url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip", subdirectory = "tracing" }
+ops = { url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip" }
 
 # Linting tools configuration
 [tool.ruff]

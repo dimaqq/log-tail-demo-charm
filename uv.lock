@@ -58,14 +58,14 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "opentelemetry-api", specifier = ">=1.31.1" },
-    { name = "ops", url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip" },
-    { name = "ops-tracing", url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip", subdirectory = "tracing" },
+    { name = "ops", url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip" },
+    { name = "ops-tracing", url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip", subdirectory = "tracing" },
     { name = "pyright", marker = "extra == 'dev'", specifier = ">=1.1.398" },
 ]
 provides-extras = ["dev"]
 
 [package.metadata.requires-dev]
-dev = [{ name = "ops-scenario", url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip", subdirectory = "testing" }]
+dev = [{ name = "ops-scenario", url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip", subdirectory = "testing" }]
 
 [[package]]
 name = "nodeenv"
@@ -119,14 +119,14 @@ wheels = [
 [[package]]
 name = "ops"
 version = "2.21.0.dev0"
-source = { url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip" }
+source = { url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip" }
 dependencies = [
     { name = "importlib-metadata" },
     { name = "opentelemetry-api" },
     { name = "pyyaml" },
     { name = "websocket-client" },
 ]
-sdist = { hash = "sha256:c7798d1ec689833ff6765f2d22fd21c3fa95bf4c029de9a6b683c35ca5203253" }
+sdist = { hash = "sha256:5b69f385b760a5fc51e0ad35762250b846a1e9df320fcbd0a60ae5d06bcdbfaf" }
 
 [package.metadata]
 requires-dist = [
@@ -155,12 +155,12 @@ provides-extras = ["docs", "testing", "tracing", "harness"]
 [[package]]
 name = "ops-scenario"
 version = "7.21.0.dev0"
-source = { url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip", subdirectory = "testing" }
+source = { url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip", subdirectory = "testing" }
 dependencies = [
     { name = "ops" },
     { name = "pyyaml" },
 ]
-sdist = { hash = "sha256:c7798d1ec689833ff6765f2d22fd21c3fa95bf4c029de9a6b683c35ca5203253" }
+sdist = { hash = "sha256:5b69f385b760a5fc51e0ad35762250b846a1e9df320fcbd0a60ae5d06bcdbfaf" }
 
 [package.metadata]
 requires-dist = [
@@ -171,14 +171,14 @@ requires-dist = [
 [[package]]
 name = "ops-tracing"
 version = "2.21.0.dev0"
-source = { url = "https://github.com/dimaqq/operator/archive/refs/tags/2.21.0-rc4.zip", subdirectory = "tracing" }
+source = { url = "https://github.com/dimaqq/operator/archive/refs/tags/preview123.zip", subdirectory = "tracing" }
 dependencies = [
     { name = "opentelemetry-sdk" },
     { name = "ops" },
     { name = "otlp-json" },
     { name = "pydantic" },
 ]
-sdist = { hash = "sha256:c7798d1ec689833ff6765f2d22fd21c3fa95bf4c029de9a6b683c35ca5203253" }
+sdist = { hash = "sha256:5b69f385b760a5fc51e0ad35762250b846a1e9df320fcbd0a60ae5d06bcdbfaf" }
 
 [package.metadata]
 requires-dist = [
