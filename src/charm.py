@@ -23,7 +23,7 @@ import workload
 class MyCharm(ops.CharmBase):
     def __init__(self, framework: ops.Framework):
         super().__init__(framework)
-        self.tracing = ops.tracing.Tracing(self, "charm-tracing", ca_relation_name="send-ca-cert")
+        self.tracing = ops.tracing.Tracing(self, "charm-tracing", ca_relation_name="receive-ca-cert")
         self.framework.observe(self.on.workload_pebble_ready, self._on_pebble_ready)
 
     def _on_pebble_ready(self, event: ops.PebbleReadyEvent) -> None:
